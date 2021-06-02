@@ -1,0 +1,159 @@
+<!doctype html>
+<html >
+
+<head>
+    <!-- Metadados -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+    <!-- Título da página  -->
+    <title>.:Formulário de Registro:.</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+    <div>
+        <h1 id="titulo">Formulário de Registro</h1>
+        <p id="subtitulo">Os campos com (*) são Obrigatórios</p>
+        <br>
+    </div>
+
+    <!-- Início do formulário -->
+    <form>
+
+        <!--Fieldset somente para o sobrenome ficar do lado do nome-->
+        <fieldset class="grupo">
+
+
+            <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="nome"><strong>* Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+                <span class="error"></span>
+            </div>
+
+            <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+            <div class="campo">
+                <label for="sobrenome"><strong>* Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+                <span class="error"></span>
+            </div>
+
+
+        </fieldset>
+
+        <div class="campo">
+            <labe><strong>* E-mail:</strong></labe>
+            <input type="email" name="email" id="email" required>
+            <span class="error"></span>
+        </div>
+
+
+        <div class="campo">
+            <labe><strong>* CPF:</strong></labe>
+            <input type="text" name="cpf" id="cpf"  required>
+            <span class="error"></span>
+        </div><br>
+
+
+        <!-- Campo de endereço, com div's separadas para usar a caixa de span -->
+        <div class="campo">
+            <label><strong>Informe seuEndereço:</strong></label><br>
+
+
+            <div class="campo">
+                <label>* Estado:</label>
+                <input type="text" name="cidade" id="cidade" required>
+                <span class="error"></span>
+            </div>
+
+
+            <div class="campo">
+                <label>* Cidade:</label>
+                <input type="text" name="cidade" id="cidade" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label>* Bairro:</label>
+                <input type="text" name="biarro" id="bairro" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label>* Numero da Residência:</label>
+                <input type="text" name="num" id="num" min="1" required>
+                <span class="error"></span>
+            </div>
+
+            <div class="campo">
+                <label> Complemento: </label>
+                <input type="text" name="complemento" id="comp">
+            </div>
+
+            <div class="campo">
+                <label>* CEP:</label>
+                <input type="text" id="cep" placeholder="Ex.0000-000" required>
+                <span class="error"></span>
+            </div><br>
+
+        </div>
+
+
+        <!--Campo de Inserção de telefones: celular e fixo-->
+        <div class="campo">
+            <label><strong>Telefone:</strong></label><br>
+
+            <div class="campo">
+                <label>Telefone Fixo</label>
+                <input type="tel" nome="telefone" id="telefone" placeholder="Ex.0000-0000"><br>
+            </div>
+
+            <div class="campo">
+                <label>* Celular</label>
+                <input type="text" nome="celular" id="celular" placeholder="Ex.(00) 00000-0000" required>
+                <span class="error"></span>
+            </div>
+
+
+        </div>
+
+        <!-- Campo de seleção de Gênero 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+        <div class="campo">
+            <label><strong>Informe seu Gênero</strong></label>
+            <label>
+                <input type="radio" name="devweb" value="masculino">Masculino
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="feminino">Feminino
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="outro">Outro
+            </label>
+        </div>
+
+        <!-- Caixa de texto (Caso o usuário deejse adicionar alguma informção extra)-->
+        <div class="campo">
+            <br>
+            <label for="experiencia"><strong>Conte um pouco mais sobre você: </strong></label>
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+
+        <!-- Botão para enviar o formulário -->
+        <div>
+            <input type="submit" class="botao"   value="Registrar">
+        </div>
+
+    </form>
+
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>
